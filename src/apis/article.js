@@ -25,8 +25,17 @@ export function createArticleAPI(data) {
 
 export function getArticleListAPI(params) {
   return request({
-    url: 'mp/articles',
+    url: '/mp/articles',
     method: 'GET',
     params,
+  })
+}
+
+// 删除文章
+
+export function delArticleAPI(id) {
+  return request({
+    url: `/mp/articles/${id}`,
+    method: 'DELETE',
   })
 }
